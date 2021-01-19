@@ -1,7 +1,8 @@
+require_relative "board.rb"
 
 class Game
     def initialize
-        return
+        board = Board.new
     end
 
     def play
