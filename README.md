@@ -4,7 +4,7 @@ an updated tic tac toe game
 New Changes:
 - PVP instead of PVE
 - Improved use of OOP design principles
-- Improve UI
+- Improved UI
 - Replay function
 
 Project Class Structure:
