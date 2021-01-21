@@ -8,15 +8,13 @@ New Changes:
 - Replay function
 
 Project Class Structure:
-Main:
+1. Main:
 - starts a game by instantiating a Game object and calling Game's play method
-Game:
+2. Game:
 - instantiates a new Board and displays it
-Board:
+3. Board:
 - Generates a 3x3 grid and sets win rules via array sequences
-Player:
-- Determines p1 and p2 names
-    
+
 
 Pseudocode:
 1. Welcome message / Rules
