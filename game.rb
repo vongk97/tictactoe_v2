@@ -6,6 +6,7 @@ class Game
     @current_marker # alternates b/w 'X' and 'O'
     @is_game_over # true ends the game
     @is_draw # true confirms a stalemate
+    @replay # user response to a rematch prompt
 
     def initialize
         @board = Board.new
@@ -14,6 +15,7 @@ class Game
         @current_marker = 'X'
         @is_game_over = false
         @is_draw = false
+        @replay = ""
     end
 
     def play
@@ -121,19 +123,19 @@ class Game
         end
 
         puts "Play Again?   Y or N"
-        replay = gets.chomp
-        while (replay.upcase != "Y" || replay.upcase != "N")
+        @replay = gets.chomp
+        while (@replay.upcase != "Y" || @replay.upcase != "N")
             # rematch
-            if(replay.upcase == "Y")
+            if(@replay.upcase == "Y")
                 initialize
                 play
             # end game
-            elsif(replay.upcase == "N")
+            elsif(@replay.upcase == "N")
                 break
             else
                 puts "Invalid input."
                 puts "Play Again?   Y or N"
-                replay = gets.chomp
+                @replay = gets.chomp
             end
         end
     end
